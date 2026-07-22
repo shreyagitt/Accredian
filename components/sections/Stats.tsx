@@ -8,13 +8,28 @@ import { stats } from "@/lib/data";
 
 export default function Stats() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-blue-700 via-indigo-700 to-cyan-700 py-24 text-white">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#FCFDFF] via-[#F5F9FF] to-[#EDF5FF] py-24 text-slate-900">
 
-      {/* Background Blur */}
+  {/* Top Left Glow */}
+  <div className="absolute -top-32 -left-32 h-[380px] w-[380px] rounded-full bg-[#DCEEFF]/70 blur-[110px]" />
 
-      <div className="absolute -left-32 top-0 h-72 w-72 rounded-full bg-cyan-400 opacity-20 blur-3xl"/>
+  {/* Top Right Glow */}
+  <div className="absolute -top-20 right-0 h-[320px] w-[320px] rounded-full bg-[#EAF4FF]/70 blur-[100px]" />
 
-      <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-blue-400 opacity-20 blur-3xl"/>
+  {/* Bottom Left Glow */}
+  <div className="absolute bottom-0 left-1/3 h-[280px] w-[280px] rounded-full bg-[#F2F8FF] blur-[90px]" />
+
+  {/* Bottom Right Glow */}
+  <div className="absolute -bottom-24 -right-24 h-[380px] w-[380px] rounded-full bg-[#D8EBFF]/60 blur-[120px]" />
+
+  {/* Soft Radial Overlay */}
+  <div
+    className="absolute inset-0 opacity-70"
+    style={{
+      background:
+        "radial-gradient(circle at top left, rgba(59,130,246,0.05), transparent 35%), radial-gradient(circle at bottom right, rgba(14,165,233,0.05), transparent 40%)",
+    }}
+  />
 
       <Container>
 
@@ -36,11 +51,11 @@ export default function Stats() {
                 scale:1.04,
               }}
 
-              className="rounded-3xl border border-white/20 bg-white/10 p-8 backdrop-blur-lg"
+              className="rounded-3xl border border-blue-100 bg-white/80 p-8 backdrop-blur-xl shadow-md transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-[0_20px_45px_rgba(37,99,235,.12)]"
 
             >
 
-              <h2 className="text-5xl font-bold">
+              <h2 className="text-4xl font-bold">
 
                 <CountUp
 
@@ -56,7 +71,7 @@ export default function Stats() {
 
               </h2>
 
-              <p className="mt-3 text-blue-100">
+              <p className="mt-3 text-blue-600">
                 {item.label}
               </p>
 

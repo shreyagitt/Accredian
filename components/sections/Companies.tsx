@@ -9,14 +9,18 @@ import { companies } from "@/lib/data";
 
 export default function Companies() {
   return (
-    <section className="bg-white py-20">
+    <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-cyan-50 py-24">
+      {/* Background Decorations */}
+      <div className="absolute -top-32 -left-32 h-72 w-72 rounded-full bg-blue-400/10 blur-3xl" />
+      <div className="absolute -bottom-40 -right-32 h-80 w-80 rounded-full bg-cyan-400/10 blur-3xl" />
+
       <Container>
         <SectionTitle
           title="Trusted by Leading Organizations"
           subtitle="Helping enterprises build future-ready teams across industries."
         />
 
-        <div className="grid grid-cols-2 gap-6 sm:grid-cols-4 lg:grid-cols-8">
+        <div className="mt-16 grid grid-cols-2 gap-6 sm:grid-cols-4 lg:grid-cols-8">
           {companies.map((company, index) => (
             <motion.div
               key={company.name}
@@ -28,17 +32,45 @@ export default function Companies() {
               }}
               viewport={{ once: true }}
               whileHover={{
-                y: -5,
+                y: -8,
                 scale: 1.05,
               }}
-              className="flex h-24 items-center justify-center rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-lg"
+              className="
+                group
+                flex
+                h-28
+                items-center
+                justify-center
+                rounded-2xl
+                border
+                border-blue-100
+                bg-gradient-to-br
+                from-white
+                to-blue-50
+                p-5
+                shadow-md
+                transition-all
+                duration-300
+                hover:border-blue-400
+                hover:shadow-[0_15px_40px_rgba(37,99,235,0.18)]
+                hover:bg-gradient-to-br
+                hover:from-blue-50
+                hover:to-cyan-50
+              "
             >
               <Image
                 src={company.logo}
                 alt={company.name}
-                width={90}
-                height={40}
-                className="object-contain grayscale transition hover:grayscale-0"
+                width={100}
+                height={50}
+                className="
+                  h-10
+                  w-auto
+                  object-contain
+                  transition-all
+                  duration-300
+                  group-hover:scale-110
+                "
               />
             </motion.div>
           ))}

@@ -44,11 +44,16 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-cyan-50 pt-28"
+     className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 pt-32 pb-20"
     >
+       <div className="absolute -left-40 top-10 h-[420px] w-[420px] rounded-full bg-blue-400/10 blur-[120px]" />
+
+<div className="absolute right-[-150px] top-40 h-[450px] w-[450px] rounded-full bg-cyan-400/10 blur-[140px]" />
+
+<div className="absolute left-1/2 bottom-0 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-indigo-300/10 blur-[120px]" /> 
       <Container>
 
-        <div className="grid min-h-[90vh] items-center gap-14 lg:grid-cols-2">
+        <div className="grid min-h-[88vh] items-center gap-24 lg:grid-cols-[1.05fr_.95fr]">
 
           {/* Left */}
 

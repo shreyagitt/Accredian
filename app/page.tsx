@@ -8,7 +8,7 @@ import Process from "@/components/sections/Process";
 import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
 import Contact from "@/components/sections/Contact";
-import Footer from "@/components/layout/Footer";
+import Footer from "@/components/layout/Footer"
 
 export default function Home() {
   return (
@@ -27,6 +27,7 @@ export default function Home() {
         <Process />
 
         <Stats />
+        
 
         
 

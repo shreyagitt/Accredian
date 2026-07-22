@@ -1,56 +1,58 @@
-import {
-  BookOpen,
-  Target,
-  TrendingUp,
-  Handshake,
-} from "lucide-react";
 
 import {
-  Brain,
-  Database,
-  Code2,
+  BrainCircuit,
+  Users,
   BarChart3,
+  ShieldCheck,ClipboardCheck,
+  BookOpen,
+  UsersRound,
+  LineChart,
 } from "lucide-react";
 
-//Program
-export const programs = [
+
+
+export const benefits = [
   {
-    title: "AI & Machine Learning",
+    id: 1,
+    icon: BrainCircuit,
+    title: "AI-Powered Learning",
     description:
-      "Master Machine Learning, Deep Learning, NLP and Generative AI through hands-on projects.",
-    duration: "12 Weeks",
-    level: "Beginner",
-    mode: "Live Classes",
-    icon: Brain,
+      "Deliver personalized learning journeys using AI-driven recommendations tailored to every employee.",
   },
   {
-    title: "Data Science",
+    id: 2,
+    icon: Users,
+    title: "Industry Mentors",
     description:
-      "Learn Python, Statistics, SQL, Visualization and predictive analytics.",
-    duration: "10 Weeks",
-    level: "Intermediate",
-    mode: "Online",
-    icon: Database,
+      "Live sessions and mentorship from experienced professionals across leading technology companies.",
   },
   {
-    title: "Full Stack Development",
-    description:
-      "Build production-ready web applications using React, Next.js, Node.js and MongoDB.",
-    duration: "16 Weeks",
-    level: "Beginner",
-    mode: "Hybrid",
-    icon: Code2,
-  },
-  {
-    title: "Business Analytics",
-    description:
-      "Transform business data into actionable insights using Power BI and Excel.",
-    duration: "8 Weeks",
-    level: "Beginner",
-    mode: "Online",
+    id: 3,
     icon: BarChart3,
+    title: "Advanced Analytics",
+    description:
+      "Track learner engagement, completion rates, ROI, and organizational skill growth in real time.",
+  },
+  {
+    id: 4,
+    icon: ShieldCheck,
+    title: "Enterprise Security",
+    description:
+      "Built with enterprise-grade authentication, compliance, and secure cloud infrastructure.",
   },
 ];
+
+export const benefitChecklist = [
+  "Personalized learning pathways",
+  "Hands-on projects & assessments",
+  "Industry-recognized certifications",
+  "Enterprise analytics dashboard",
+  "Dedicated customer success support",
+  "Role-based learning management",
+];
+
+
+
 
 //Companies
 export const companies = [
@@ -88,71 +90,37 @@ export const companies = [
   },
 ];
 
-//Benefits
-export const benefits = [
-  {
-    title: "Expert-led Programs",
-    description:
-      "Industry professionals deliver practical, project-based learning experiences.",
-    icon: BookOpen,
-  },
-  {
-    title: "Customized Learning",
-    description:
-      "Training paths tailored to your organization's goals and workforce needs.",
-    icon: Target,
-  },
-  {
-    title: "Measurable ROI",
-    description:
-      "Track learner progress and business outcomes through detailed analytics.",
-    icon: TrendingUp,
-  },
-  {
-    title: "Dedicated Success Team",
-    description:
-      "Get onboarding, implementation, and continuous support from our experts.",
-    icon: Handshake,
-  },
-];
+
 
 //Process
 export const processSteps = [
   {
-    number: "01",
-    title: "Requirement Analysis",
+    id: 1,
+    icon: ClipboardCheck,
+    title: "Assess Skills",
     description:
-      "Understand business goals, workforce capabilities, and learning objectives.",
+      "Evaluate your workforce to identify skill gaps and learning priorities.",
   },
   {
-    number: "02",
-    title: "Skill Gap Assessment",
+    id: 2,
+    icon: BookOpen,
+    title: "Assign Learning",
     description:
-      "Evaluate employee skills to identify strengths and improvement areas.",
+      "Create personalized learning journeys aligned with business objectives.",
   },
   {
-    number: "03",
-    title: "Learning Path Design",
+    id: 3,
+    icon: UsersRound,
+    title: "Learn & Collaborate",
     description:
-      "Create customized learning journeys tailored to organizational needs.",
+      "Employees engage through live sessions, projects, and mentorship.",
   },
   {
-    number: "04",
-    title: "Live Instructor Training",
+    id: 4,
+    icon: LineChart,
+    title: "Measure Impact",
     description:
-      "Deliver engaging instructor-led sessions with hands-on projects.",
-  },
-  {
-    number: "05",
-    title: "Assessment & Feedback",
-    description:
-      "Measure progress through quizzes, assignments, and detailed feedback.",
-  },
-  {
-    number: "06",
-    title: "Certification & Analytics",
-    description:
-      "Award certifications and provide learning analytics for managers.",
+      "Track completion, performance, and business outcomes with analytics.",
   },
 ];
 

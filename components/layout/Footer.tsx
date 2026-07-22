@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 import {
   ArrowUp,
@@ -48,170 +49,447 @@ export default function Footer() {
     });
 
   return (
-    <footer className="bg-slate-950 text-slate-300">
+    <footer  className="relative overflow-hidden border-t border-blue-100 bg-gradient-to-br from-[#F8FBFF] via-[#EEF6FF] to-[#E4F1FF] text-slate-700">
+
+      {/* Background Glow */}
+
+      {/* Background Glow */}
+
+<div className="absolute -left-44 top-0 h-[420px] w-[420px] rounded-full bg-blue-400/20 blur-[170px]" />
+
+<div className="absolute -right-40 bottom-0 h-[380px] w-[380px] rounded-full bg-cyan-300/20 blur-[170px]" />
+
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,.08),transparent_70%)]" />
+
       <Container>
-        <div className="grid gap-12 border-b border-slate-800 py-20 md:grid-cols-2 lg:grid-cols-5">
+
+        <div className="relative z-10 grid gap-14 border-b border-blue-100/70 py-24 md:grid-cols-2 lg:grid-cols-5">
+
           {/* Company */}
-          <div className="lg:col-span-2">
-            <h2 className="text-3xl font-bold text-white">
-              Accredian Enterprise
+
+          <motion.div
+            initial={{ opacity: 0, y: 35 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="lg:col-span-2"
+          >
+            <h2 className="text-4xl font-black tracking-tight">
+
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+                Accredian
+              </span>
+
+              <span className="text-slate-900">
+                {" "}Enterprise
+              </span>
+
             </h2>
 
-            <p className="mt-6 leading-8 text-slate-400">
-              Empower your workforce with industry-leading learning
-              programs designed to upskill employees, improve
-              productivity, and accelerate business growth.
+            <p className="mt-6 max-w-md leading-8 text-slate-600">
+              Empower your workforce through AI-powered enterprise
+              learning, certification programs, and measurable
+              upskilling designed for modern organizations.
             </p>
 
-            <div className="mt-8 space-y-4">
-              <div className="flex items-center gap-3">
-                <Mail size={18} />
-                <span>enterprise@accredian.com</span>
+            <div className="mt-10 space-y-4">
+
+              <div className="group flex items-center gap-4 rounded-2xl border border-blue-100 bg-white/80 backdrop-blur-xl shadow-lg shadow-blue-100/50  hover:border-blue-400 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-200/60 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500">
+
+                <div className="rounded-xl bg-blue-600/15 p-3 text-blue-400">
+                  <Mail size={18} />
+                </div>
+
+                <span className="text-slate-600">
+                  enterprise@accredian.com
+                </span>
+
               </div>
 
-              <div className="flex items-center gap-3">
-                <Phone size={18} />
-                <span>+91 98765 43210</span>
+              <div className="group flex items-center gap-4 rounded-2xl border border-blue-100 bg-white/80 backdrop-blur-xl shadow-lg shadow-blue-100/50  hover:border-blue-400 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-200/60 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500">
+
+                <div className="rounded-xl bg-blue-600/15 p-3 text-blue-400">
+                  <Phone size={18} />
+                </div>
+
+                <span className="text-slate-600">
+                  +91 98765 43210
+                </span>
+
               </div>
 
-              <div className="flex items-center gap-3">
-                <MapPin size={18} />
-                <span>Gurugram, Haryana, India</span>
+              <div className="group flex items-center gap-4 rounded-2xl border border-blue-100 bg-white/80 backdrop-blur-xl shadow-lg shadow-blue-100/50  hover:border-blue-400 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-200/60 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500">
+
+                <div className="rounded-xl bg-blue-600/15 p-3 text-blue-400">
+                  <MapPin size={18} />
+                </div>
+
+                <span className="text-slate-600">
+                  Gurugram, Haryana, India
+                </span>
+
               </div>
+
             </div>
-          </div>
 
-          {/* Company Links */}
+          </motion.div>
+
+          {/* Company */}
+
           <div>
-            <h3 className="mb-5 text-lg font-semibold text-white">
+
+            <h3 className="mb-6 text-xl font-bold text-slate-900">
               Company
             </h3>
 
-            <ul className="space-y-3">
+            <ul className="space-y-4">
+
               {companyLinks.map((item) => (
+
                 <li key={item.label}>
+
                   <Link
                     href={item.href}
-                    className="transition hover:text-blue-400"
+                    className="group inline-flex items-center transition-all duration-300 hover:translate-x-2 hover:text-blue-400"
                   >
                     {item.label}
                   </Link>
+
                 </li>
+
               ))}
+
             </ul>
+
           </div>
 
           {/* Programs */}
+
           <div>
-            <h3 className="mb-5 text-lg font-semibold text-white">
+
+            <h3 className="mb-6 text-xl font-bold text-slate-900">
               Programs
             </h3>
 
-            <ul className="space-y-3">
+            <ul className="space-y-4">
+
               {programLinks.map((item) => (
+
                 <li key={item.label}>
+
                   <Link
                     href={item.href}
-                    className="transition hover:text-blue-400"
+                    className="group inline-flex items-center transition-all duration-300 hover:translate-x-2 hover:text-blue-400"
                   >
                     {item.label}
                   </Link>
+
                 </li>
+
               ))}
+
             </ul>
+
           </div>
 
           {/* Resources */}
+
           <div>
-            <h3 className="mb-5 text-lg font-semibold text-white">
+
+            <h3 className="mb-6 text-xl font-bold text-slate-900">
               Resources
             </h3>
 
-            <ul className="space-y-3">
+            <ul className="space-y-4">
+
               {resourceLinks.map((item) => (
+
                 <li key={item.label}>
+
                   <Link
                     href={item.href}
-                    className="transition hover:text-blue-400"
+                    className="group inline-flex items-center transition-all duration-300 hover:translate-x-2 hover:text-blue-400"
                   >
                     {item.label}
                   </Link>
+
                 </li>
+
               ))}
+
             </ul>
+
           </div>
+
         </div>
+                {/* Newsletter */}
 
-        {/* Newsletter */}
-        <div className="flex flex-col items-center justify-between gap-6 border-b border-slate-800 py-12 lg:flex-row">
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 40,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.6,
+            delay: 0.15,
+          }}
+          viewport={{
+            once: true,
+          }}
+          className="relative my-16 overflow-hidden rounded-[32px] border border-blue-100 bg-gradient-to-r from-white/90 to-[#f4f9ff]/90 p-10 shadow-[0_20px_80px_rgba(0,0,0,.35)] backdrop-blur-xl"
+        >
+          {/* Background Glow */}
+
+          <div className="absolute -right-20 -top-20 h-52 w-52 rounded-full bg-blue-600/10 blur-[120px]" />
+
+          <div className="absolute -left-16 bottom-0 h-40 w-40 rounded-full bg-cyan-500/10 blur-[120px]" />
+
+          <div className="relative z-10 flex flex-col items-center justify-between gap-10 lg:flex-row">
+
+            {/* Left */}
+
+            <div className="max-w-lg">
+
+              <span className="inline-flex rounded-full bg-blue-600/15 px-4 py-2 text-sm font-semibold text-blue-300">
+                Newsletter
+              </span>
+
+              <h3 className="mt-5 text-4xl font-black text-slate-900">
+                Stay Ahead with Enterprise Learning
+              </h3>
+
+              <p className="mt-4 leading-8 text-slate-600">
+                Get expert insights, AI trends, learning resources,
+                case studies, and enterprise updates delivered
+                directly to your inbox.
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+
+                <span className="rounded-full border border-slate-700 bg-white px-4 py-2 text-sm text-slate-600">
+                  Weekly Insights
+                </span>
+
+                <span className="rounded-full border border-slate-700 bg-white px-4 py-2 text-sm text-slate-600">
+                  No Spam
+                </span>
+
+                <span className="rounded-full border border-slate-700 bg-white px-4 py-2 text-sm text-slate-600">
+                  Unsubscribe Anytime
+                </span>
+
+              </div>
+
+            </div>
+
+            {/* Right */}
+
+            <div className="w-full max-w-xl">
+
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+
+                  const email =
+                    (
+                      e.currentTarget.elements.namedItem(
+                        "newsletter"
+                      ) as HTMLInputElement
+                    ).value;
+
+                  const regex =
+                    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                  if (!regex.test(email)) {
+                    alert("Please enter a valid email.");
+                    return;
+                  }
+
+                  alert("Thank you for subscribing!");
+
+                  e.currentTarget.reset();
+                }}
+                className="space-y-5"
+              >
+
+                <div className="flex flex-col gap-4 sm:flex-row">
+
+                  <input
+                    name="newsletter"
+                    type="email"
+                    placeholder="Enter your work email"
+                    className="
+                    h-14
+                    flex-1
+                    rounded-2xl
+                    border
+                    bg-white
+border-blue-200
+
+shadow-sm
+                    px-6
+                    text-slate-900
+                    outline-none
+                    transition-all
+                    duration-300
+                    placeholder:text-slate-500
+                    focus:border-blue-500
+                    focus:ring-blue-500/20
+                    focus:ring-4
+                    
+                    "
+                  />
+
+                  <Button
+                    variant="gradient"
+                    size="lg"
+                  >
+                    Subscribe →
+                  </Button>
+
+                </div>
+
+                <p className="text-sm text-slate-500">
+                  By subscribing you agree to receive emails
+                  about enterprise learning, product updates,
+                  and industry insights.
+                </p>
+
+              </form>
+
+            </div>
+
+          </div>
+
+        </motion.div>
+                {/* Bottom */}
+
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="flex flex-col gap-8 border-t border-blue-100/70 py-10 lg:flex-row lg:items-center lg:justify-between"
+        >
+          {/* Copyright */}
+
           <div>
-            <h3 className="text-2xl font-bold text-white">
-              Stay Updated
-            </h3>
+            <p className="text-sm text-slate-500">
+              © {new Date().getFullYear()}{" "}
+              <span className="font-semibold text-slate-600">
+                Accredian Enterprise
+              </span>
+              . All rights reserved.
+            </p>
 
-            <p className="mt-2 text-slate-400">
-              Subscribe to receive enterprise learning insights and
-              product updates.
+            <p className="mt-2 text-sm text-slate-600">
+              Empowering organizations through AI-driven workforce
+              transformation.
             </p>
           </div>
 
-          <div className="flex w-full max-w-xl gap-3">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 rounded-xl border border-slate-700 bg-slate-900 px-5 py-3 text-white outline-none focus:border-blue-500"
-            />
+          {/* Social Icons */}
 
-            <Button variant="gradient">
-              Subscribe
-            </Button>
-          </div>
-        </div>
+          <div className="flex items-center gap-3">
 
-        {/* Bottom */}
-        <div className="flex flex-col items-center justify-between gap-6 py-8 lg:flex-row">
-          <p className="text-sm text-slate-500">
-            © {new Date().getFullYear()} Accredian Enterprise. All
-            rights reserved.
-          </p>
+            {[
+              {
+                icon: <FaFacebookF size={17} />,
+                href: "#",
+              },
+              {
+                icon: <FaXTwitter size={17} />,
+                href: "#",
+              },
+              {
+                icon: <FaLinkedinIn size={17} />,
+                href: "#",
+              },
+              {
+                icon: <FaInstagram size={17} />,
+                href: "#",
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                whileHover={{
+                  y: -6,
+                  scale: 1.08,
+                }}
+                whileTap={{
+                  scale: 0.95,
+                }}
+              >
+                <Link
+                  href={item.href}
+                  className="
+                  flex
+                  h-12
+                  w-12
+                  items-center
+                  justify-center
+                  rounded-2xl
+                  border
+                  border-blue-100
+                  bg-white
+                  text-slate-600
+                  shadow-md shadow-blue-100/40
+                  transition-all
+                  duration-300
+                  hover:bg-gradient-to-r
+hover:from-blue-600
+hover:to-cyan-500
+hover:text-white
+hover:border-transparent
+hover:shadow-xl
+hover:shadow-blue-300/40
+                  "
+                >
+                  {item.icon}
+                </Link>
+              </motion.div>
+            ))}
 
-          <div className="flex items-center gap-4">
-            <Link
-              href="#"
-              className="rounded-full bg-slate-900 p-3 transition hover:bg-blue-600"
-            >
-              <FaFacebookF size={18} />
-            </Link>
+            {/* Scroll To Top */}
 
-            <Link
-              href="#"
-              className="rounded-full bg-slate-900 p-3 transition hover:bg-blue-600"
-            >
-              <FaXTwitter size={18} />
-            </Link>
-
-            <Link
-              href="#"
-              className="rounded-full bg-slate-900 p-3 transition hover:bg-blue-600"
-            >
-              <FaLinkedinIn size={18} />
-            </Link>
-
-            <Link
-              href="#"
-              className="rounded-full bg-slate-900 p-3 transition hover:bg-blue-600"
-            >
-              <FaInstagram size={18} />
-            </Link>
-
-            <button
+            <motion.button
+              whileHover={{
+                scale: 1.08,
+                y: -4,
+              }}
+              whileTap={{
+                scale: 0.94,
+              }}
               onClick={scrollTop}
-              className="ml-4 rounded-full bg-blue-600 p-3 transition hover:scale-110 hover:bg-blue-700"
+              className="
+              ml-3
+              flex
+              h-12
+              w-12
+              items-center
+              justify-center
+              rounded-2xl
+              bg-gradient-to-r
+              from-blue-600
+              to-cyan-500
+              text-slate-900
+              shadow-lg
+              shadow-blue-600/30
+              transition-all
+              duration-300
+              hover:shadow-blue-500/50
+              "
             >
-              <ArrowUp size={18} className="text-white" />
-            </button>
+              <ArrowUp size={18} />
+            </motion.button>
+
           </div>
-        </div>
+        </motion.div>
+
       </Container>
     </footer>
   );
