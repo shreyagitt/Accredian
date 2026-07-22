@@ -1,36 +1,246 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Accredian Enterprise
 
-## Getting Started
+A modern, responsive enterprise learning platform built with **Next.js**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**. This project showcases enterprise upskilling programs, corporate training solutions, and workforce development through a premium, interactive user experience.
 
-First, run the development server:
+## 🌐 Live Demo
+
+🔗 https://accredian-eosin.vercel.app/
+
+---
+
+## 📸 Preview
+
+![Accredian Enterprise](public/og-image.png)
+
+> Replace this image with a screenshot of your homepage if available.
+
+---
+
+## ✨ Features
+
+- Modern Enterprise Landing Page
+- Responsive Design (Desktop, Tablet & Mobile)
+- Smooth Scroll Navigation
+- Animated Hero Section
+- Enterprise Learning Programs
+- Benefits & Learning Process
+- Animated Statistics
+- Testimonials Slider
+- FAQ Accordion
+- Contact Form
+- Premium Footer
+- SEO Optimized
+- Fast Performance
+- Accessible UI Components
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+
+### UI Libraries
+
+- Lucide React
+- React Icons
+- Swiper.js
+- React CountUp
+
+### Development
+
+- ESLint
+- PostCSS
+- Vercel
+
+---
+
+## 📂 Folder Structure
+
+```text
+app/
+│
+├── layout.tsx
+├── page.tsx
+├── globals.css
+└── favicon.ico
+
+components/
+│
+├── layout/
+│   ├── Navbar.tsx
+│   └── Footer.tsx
+│
+├── sections/
+│   ├── Hero.tsx
+│   ├── Companies.tsx
+│   ├── Programs.tsx
+│   ├── Benefits.tsx
+│   ├── Process.tsx
+│   ├── Stats.tsx
+│   ├── Testimonials.tsx
+│   ├── FAQ.tsx
+│   └── Contact.tsx
+│
+└── ui/
+    ├── Button.tsx
+    ├── Container.tsx
+    └── SectionTitle.tsx
+
+lib/
+├── constants.ts
+└── data.ts
+
+public/
+├── images/
+├── logo.png
+└── favicon.ico
+```
+
+---
+
+## 🚀 Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/shreyagitt/Accredian
+```
+
+Navigate to the project
+
+```bash
+cd <repository-name>
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📦 Production Build
 
-To learn more about Next.js, take a look at the following resources:
+Build the application
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Start production server
 
-## Deploy on Vercel
+```bash
+npm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎯 Website Sections
+
+- Hero
+- Trusted Companies
+- Enterprise Learning Programs
+- Benefits
+- Learning Process
+- Statistics
+- Testimonials
+- Frequently Asked Questions
+- Contact
+- Footer
+
+---
+
+## 📱 Responsive Design
+
+Optimized for:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+---
+
+## 🎨 Animations
+
+Built using **Framer Motion**
+
+- Fade Animations
+- Slide Animations
+- Hover Effects
+- Floating Elements
+- CountUp Statistics
+- Smooth Section Transitions
+
+---
+
+## ⚡ Performance
+
+- Optimized Images
+- Next.js App Router
+- Lazy Loading
+- SEO Metadata
+- Responsive Layout
+- Fast Page Load
+
+---
+
+## 🚀 Deployment
+
+The project is deployed on **Vercel**.
+
+Live URL:
+
+**https://accredian-eosin.vercel.app/**
+
+To deploy your own version:
+
+1. Fork or clone the repository.
+2. Push it to GitHub.
+3. Import the repository into Vercel.
+4. Deploy.
+
+---
+
+## 🔮 Future Improvements
+
+- Dark Mode
+- Blog Section
+- Authentication
+- CMS Integration
+- Backend API
+- Contact Form Email Integration
+- Analytics Dashboard
+
+---
+
+## 👨‍💻 Author
+
+Developed by **Shreya Shree**
+
+GitHub: https://github.com/shreyagitt
+
+---
+
+## 📄 License
+
+This project is created for educational and portfolio purposes.
