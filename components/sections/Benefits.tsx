@@ -10,6 +10,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 
+import Link from "next/link";
+
 import Container from "../ui/Container";
 import SectionTitle from "../ui/SectionTitle";
 import Button from "../ui/Button";
@@ -109,12 +111,13 @@ export default function Benefits() {
               ))}
             </div>
 
-            <Button
-              className="mt-10"
-              rightIcon={<ArrowRight size={18} />}
-            >
-              Explore Platform
-            </Button>
+            <Link href="#contact" className="mt-10 inline-block">
+  <Button
+    rightIcon={<ArrowRight size={18} />}
+  >
+    Explore Platform
+  </Button>
+</Link>
           </motion.div>
         </div>
       </Container>

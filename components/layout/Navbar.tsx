@@ -8,6 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
 import { NAV_LINKS } from "@/lib/constants";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,12 +54,25 @@ export default function Navbar() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
 
-          <Link
-            href="/"
-            className="text-2xl font-bold text-blue-600"
-          >
-            Accredian
-          </Link>
+     <Link
+  href="/"
+  className="flex items-center gap-3"
+>
+  {/* <Image
+    src="/logos/image.png"
+    alt="Accredian Logo"
+    width={48}
+    height={48}
+    priority
+    className="h-12 w-auto"
+  /> */}
+ 
+  <span className="text-2xl font-bold">
+    <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+      Accredian
+    </span>
+  </span> 
+</Link>
 
           {/* Desktop Menu */}
 
@@ -81,8 +95,10 @@ export default function Navbar() {
           {/* Right */}
 
           <div className="hidden lg:block">
-            <Button>Contact Us</Button>
-          </div>
+  <Link href="#contact">
+    <Button>Contact Us</Button>
+  </Link>
+</div>
 
           {/* Mobile */}
 

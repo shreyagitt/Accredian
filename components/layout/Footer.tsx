@@ -454,38 +454,6 @@ hover:shadow-blue-300/40
               </motion.div>
             ))}
 
-            {/* Scroll To Top */}
-
-            <motion.button
-              whileHover={{
-                scale: 1.08,
-                y: -4,
-              }}
-              whileTap={{
-                scale: 0.94,
-              }}
-              onClick={scrollTop}
-              className="
-              ml-3
-              flex
-              h-12
-              w-12
-              items-center
-              justify-center
-              rounded-2xl
-              bg-gradient-to-r
-              from-blue-600
-              to-cyan-500
-              text-slate-900
-              shadow-lg
-              shadow-blue-600/30
-              transition-all
-              duration-300
-              hover:shadow-blue-500/50
-              "
-            >
-              <ArrowUp size={18} />
-            </motion.button>
 
           </div>
         </motion.div>

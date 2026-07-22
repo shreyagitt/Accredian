@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Accredian Enterprise",
+  title: "Accredian ",
   description: "Enterprise Learning Platform",
 };
 

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -107,12 +108,14 @@ export default function Programs() {
                   </span>
                 </div>
 
-                <Button
-                  className="mt-8 w-full"
-                  rightIcon={<ArrowRight size={18} />}
-                >
-                  Learn More
-                </Button>
+               <Link href="#contact" className="mt-8 block">
+  <Button
+    className="w-full"
+    rightIcon={<ArrowRight size={18} />}
+  >
+    Learn More
+  </Button>
+</Link>
               </motion.div>
             );
           })}

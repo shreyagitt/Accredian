@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { motion } from "framer-motion";
 import Container from "../ui/Container";
 import SectionTitle from "../ui/SectionTitle";
@@ -239,7 +239,7 @@ export default function Process() {
       expert mentorship, hands-on projects, and enterprise
       analytics that deliver measurable business outcomes.
     </p>
-
+<Link href="#contact">
     <button
       className="
       mt-10
@@ -261,6 +261,7 @@ export default function Process() {
     >
       Schedule a Demo
     </button>
+    </Link>
 
   </div>
 </motion.div>

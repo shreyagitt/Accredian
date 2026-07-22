@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import {
@@ -81,15 +81,17 @@ export default function Hero() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-
+<Link href="#contact" >
               <Button>
                 Get Started
               </Button>
-
+              </Link>
+<Link href="#contact" >
               <button className="flex items-center gap-2 rounded-xl border px-6 py-3 font-medium transition hover:bg-gray-100">
                 Explore Programs
                 <ArrowRight size={18}/>
               </button>
+              </Link>
 
             </div>
 
